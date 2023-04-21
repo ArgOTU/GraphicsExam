@@ -20,9 +20,9 @@ To create the effect of a brick wall with depth, I've decided that utilizing nor
 
 
 STEP 3: WATER SHADER
-From what I remember, the water shaders we covered in class work by using displacement to adjust the vertices of a surface, making it appear to be moving like waves. To create the wave effect, the shader uses a sine wave (or similar moving function) to determine how the vertices should move on any given frame.
+From what I remember, the water shaders we covered in class work by using displacement mapping to adjust the vertices of a surface over time, making the surface appear to be moving like waves. To create the wave effect, the shader uses a sine wave (or similar function that changes over time, such as cosine) to determine how the vertices should move on any given frame.
 
-To implement a toggle between the water being murky and clear, I'd first need to set up two materials: one that is transparent, and another that is opaque. Then, I would write a script for the water object that stores those two materials, and switches which one is applied to the object if it detects a given button being pressed.
+To implement a toggle between the water being murky and clear, I'd first need to set up two materials using slightly different variants of the water shader: one where the surface texture is rendered as transparent, and another where it is opaque. Then, I would write a script for the water object that stores those two materials, and switches which one is applied to the object if it detects a given button being pressed.
 
 
 STEP 4: BLOOM
